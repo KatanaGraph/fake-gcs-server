@@ -10,11 +10,6 @@ build:
     docker:
       dockerfile: Dockerfile
 deploy:
-  kustomize:
-    defaultNamespace: training-operator
-    paths:
-      - manifests/training-operator/1.5.0
-
   helm:
     releases:
       - name: gcs-simulator

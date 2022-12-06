@@ -3,6 +3,7 @@
 Install dependencies with ``make dependencies``.
 Start/Stop minikube with ``make start-minikube``.
 Deploy and build fake-gcs with ``skaffold dev``.
+To get a minikube dashboard run ``minikube dashboard -p minikube``.
 
 # fake-gcs-server
 
