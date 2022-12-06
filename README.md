@@ -1,3 +1,10 @@
+# helm chart
+
+Install dependencies with ``make dependencies``.
+Start/Stop minikube with ``make start-minikube``.
+Deploy and build fake-gcs with ``skaffold dev``.
+To get a minikube dashboard run ``minikube dashboard -p minikube``.
+
 # fake-gcs-server
 
 [![Build Status](https://github.com/fsouza/fake-gcs-server/workflows/Build/badge.svg)](https://github.com/fsouza/fake-gcs-server/actions?query=branch:main+workflow:Build)

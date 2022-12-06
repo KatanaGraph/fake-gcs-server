@@ -1,0 +1,22 @@
+---
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: fake-gcs
+build:
+  artifacts:
+  - context: .
+    image: fake-gcs
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+      - name: gcs-simulator
+        chartPath: chart/gcs-simulator
+        createNamespace: true
+        namespace: gcs-simulator
+        setValueTemplates:
+          image: "{{.IMAGE_FULLY_QUALIFIED_fake_gcs}}"
+
+  kubeContext: minikube
